@@ -3,7 +3,7 @@
 **DM-GY 9201 G — Special Topics in Integrated Design and Media**  
 Integrated Digital Media, NYU Tandon
 
-View the [complete syllabus document](https://docs.google.com/document/d/1f9puKOwuWvr8f0P3pOsLv9yeo-EM6-UWosXjTTtvD_o/edit?tab=t.0#heading=h.n2x4rh3egzk3)
+See the [complete syllabus document](https://docs.google.com/document/d/1f9puKOwuWvr8f0P3pOsLv9yeo-EM6-UWosXjTTtvD_o/edit?tab=t.0#heading=h.n2x4rh3egzk3)
 
 ## Course Description
 Critical design uses the language and tools of design to ask questions rather than solve problems. It makes the familiar strange, renders the invisible legible, and proposes alternatives — not because they are convenient, but because imagining and building them changes what is seen as possible.
