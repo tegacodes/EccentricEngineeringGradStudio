@@ -11,9 +11,9 @@ See the [complete syllabus document](https://docs.google.com/document/d/1f9puKOw
 | **Duration** | 7 weeks |
 
 ## Course Description
-Critical design uses the language and tools of design to ask questions rather than solve problems. It makes the familiar strange, renders the invisible legible, and proposes alternatives — not because they are convenient, but because imagining and building them changes what is seen as possible.
+Critical design uses the language and tools of design to ask questions rather than solve problems. It makes the familiar strange, renders the invisible legible, and proposes alternatives. These alternatives are not frictionless, convenient or efficient but imagining and building them changes what is seen as possible.
 
-This 7-week course draws on that tradition but applies it to networked infrastructure and engineering — what we call **eccentric engineering**. Not engineering as optimization, but engineering as argument. The working hypothesis is that powerful works of design often do not just reveal broken systems but are themselves systems that run differently. This course is about critically engaging with function, and implementing critique through new propositions.
+This 7-week course draws on that tradition but applies it to networked infrastructure and engineering — what we call **eccentric engineering**. Not engineering as optimization, but engineering as argument. The working hypothesis is that powerful works of design often do not just reveal broken systems but are themselves systems that run differently. This course is about critically engaging with function, and implementing critique through intervention and new propositions.
 
 The course moves through three modes:
 1. **Reading infrastructure**
