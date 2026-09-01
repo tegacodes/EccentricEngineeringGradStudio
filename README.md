@@ -26,7 +26,7 @@ The course moves through three modes:
 These are the analytical and making tools carried through the whole course. In project documentation, students identify which method is doing what work.
 
 - **Defamiliarization** — making a familiar system strange enough to see clearly. Used in reading exercises and documentation throughout.
-- **Inversion** — identifying a dominant assumption and engineering its opposite. The generative move in every brief: find the assumption, build the refusal.
+- **Inversion** — identifying a dominant assumption and engineering its opposite. An inversion can be achieved in many ways, through blockage, speed logic substitution, user substitution and so on.
 - **The Functional Diegetic Prototype** — build a system or intervention . Unlike conventional critical design, the prototype is not an object that *represents* a system — it *is* the system. It acts in the world and its critique is inseparable from its function.
 
 ## Weeks
