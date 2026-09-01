@@ -2,8 +2,7 @@
 **DM-GY 9201 G — Special Topics in Integrated Design and Media**  
 Integrated Digital Media, NYU Tandon
 
-**Tega Brain**
-- [Sign up for student hours](#) (20 min appointments)
+**Tega Brain**: [Office hour appointments](https://calendar.app.google/uNxTy3oXdx2XoEuw7)
   
 See the [complete syllabus document](https://docs.google.com/document/d/1f9puKOwuWvr8f0P3pOsLv9yeo-EM6-UWosXjTTtvD_o/edit?tab=t.0#heading=h.n2x4rh3egzk3)
 
