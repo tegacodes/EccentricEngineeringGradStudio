@@ -1,6 +1,6 @@
 # Eccentric Engineering 7 Week Graduate Studio
 
-**DM-GY 9201 G — Special Topics in IDM**
+**DM-GY 9201 G — Special Topics in IDM**  
 Integrated Digital Media, NYU Tandon
 
 ## Course Description
