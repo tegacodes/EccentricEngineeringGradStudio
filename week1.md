@@ -2,6 +2,9 @@
 
 ## Lecture: Infrastructure as Argument
 
+![](images/flamenet.jpg)
+*Screenshot from Being Radiotropic, 2016*. 
+
 References from lecture (slides in drive)
 
 Critical Design
@@ -30,13 +33,6 @@ Eccentric engineering:
 - [What the Frog's Nose Tells the Frog's Brain](https://tegabrain.com/The-Frogs-Nose), 2012
 - [Being Radiotropic](https://tegabrain.com/Being-Radiotropic), 2016
 
-## Homework
-
-1. READ: The Critical Engineering Manifesto - Julian Oliver, Gordan Savičić, Danja Vasiliev.  
-READ: Langdon Winner, "Do Artifacts Have Politics?"  
-READ (OPTIONAL): Dean Chahim, "Engineers Don't Solve Problems" (Logic(s) Magazine, Issue 5: Failure, 2018)
-2. WRITE and POST your responses to these readings
-3. FINISH the reading infrastructure assignment. Post your responses to share in class next week
 
 
 

@@ -1,5 +1,5 @@
 # Eccentric Engineering Graduate Studio
-**DM-GY 9201 G — Special Topics in Integrated Design and Media**, NYU Tandon
+**DM-GY 9201 G — Special Topics in Integrated Design and Media**
 
 Taught by [Tega Brain](https://engineering.nyu.edu/faculty/tega-brain)
 
@@ -30,8 +30,8 @@ These are the analytical and making tools carried through the whole course. In p
 - **The Functional Diegetic Prototype** — build a system or intervention . Unlike conventional critical design, the prototype is not an object that *represents* a system — it *is* the system. It acts in the world and its critique is inseparable from its function.
 
 ## Weeks
-[Week 1: Infrastructure as Argument]()  
-[Week 1 homework]()  
+[Week 1: Infrastructure as Argument](week1.md)  
+[Week 1 homework](week1hw.md)  
 [Week 2]()    
 [Week 3]()    
 [Week 4]()   
