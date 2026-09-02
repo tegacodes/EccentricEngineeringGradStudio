@@ -7,7 +7,7 @@ Taught by [Tega Brain](https://engineering.nyu.edu/faculty/tega-brain)
 - **Meetings**: Wednesday, 11:00am–1:50pm at 370 Jay St, Room 312 
 - [Office hour appointments](https://calendar.app.google/uNxTy3oXdx2XoEuw7)  
 - [Complete syllabus document](https://docs.google.com/document/d/1f9puKOwuWvr8f0P3pOsLv9yeo-EM6-UWosXjTTtvD_o/edit?tab=t.0#heading=h.n2x4rh3egzk3)   
-- [Class drive is here](https://drive.google.com/drive/folders/1yGQHN-LFlFxphjfrVrK4FXKr4lS1Th1a?usp=sharing ) (readings, course materials, place to upload your work) 
+- [Class drive is here](https://drive.google.com/drive/folders/1yGQHN-LFlFxphjfrVrK4FXKr4lS1Th1a?usp=sharing ) ([readings](https://drive.google.com/drive/folders/1UfeS4S0KcX_XBNraLR04AfOW-srEMs4v?usp=sharing), course materials, place to upload your work) 
 
 
 
