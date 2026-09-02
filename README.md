@@ -16,10 +16,10 @@ Critical design uses the language and tools of design to ask questions rather th
 
 This 7-week course draws on that tradition but applies it to networked infrastructure and engineering — what we call **eccentric engineering**. Not engineering as optimization, but engineering as argument. The working hypothesis is that powerful works of design often do not just reveal broken systems but are themselves systems that run differently. This course is about critically engaging with function, and implementing critique through intervention and new propositions.
 
-The course moves through three modes:
-1. **Reading infrastructure**
-2. **Defamiliarizing through making**
-3. **Realizing alternates**
+The course moves through three modes:   
+1. **Reading infrastructure**   
+2. **Defamiliarizing through making**   
+3. **Realizing alternates**   
 
 ## Three Critical Methods
 
@@ -27,7 +27,7 @@ These are the analytical and making tools carried through the whole course. In p
 
 - **Defamiliarization** — making a familiar system strange enough to see clearly. Used in reading exercises and documentation throughout.
 - **Inversion** — identifying a dominant assumption and engineering its opposite. An inversion can be achieved in many ways, through blockage, speed logic substitution, user substitution and so on.
-- **The Functional Diegetic Prototype** — build a system or intervention . Unlike conventional critical design, the prototype is not an object that *represents* a system — it *is* the system. It acts in the world and its critique is inseparable from its function.
+- **The Functional Diegetic Prototype** — build a system or intervention. Unlike conventional critical design, the prototype is not an object that *represents* a system — it acts as a system or intervenes in one. Its critique is inseparable from its function.
 
 ## Weeks
 [Week 1: Infrastructure as Argument](week1.md)  
