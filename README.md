@@ -3,7 +3,5 @@
 
 Students please note that the homepage for this class has been moved here: [https://wp.nyu.edu/eccentricengineering/](https://wp.nyu.edu/eccentricengineering/)
 
-Taught by [Tega Brain](https://engineering.nyu.edu/faculty/tega-brain)
 
-Course info
 
