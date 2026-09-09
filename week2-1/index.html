@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+
+  <body>
+    <h1 id="output">loading...</h1>
+    <h2 id="p_output">loading...</h2>
+    <p
+      id="wind-arrow"
+      style="font-size: 4rem; display: inline-block; transform: rotate(0deg)"
+    >
+      wind direction ↑
+    </p>
+
+    <p id="fulldata"></p>
+    <script>
+      async function getWeather() {
+        //function to get weather data. Asyc means it will take time to get the data back from the server. It doesnt happen instantly.
+        const lat = 40.71,
+          lon = -74.01; // NYC
+        const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,wind_direction_10m,wind_speed_10m,precipitation,weather_code`; //this is the url that we are going to use to get the weather data. It is using the lat and lon variables to get the weather for NYC.
+        const response = await fetch(url); //this is asking a serer for data - same as a browser loading a page.
+        const data = await response.json(); //awaiting for the data to come back from the server and then converting it into a format that we can use in our code.
+        console.log(data); // open browser dev tools > Console to see this
+
+        //GET TEMP AND CHANGE COLOR
+        const temp = data.current.temperature_2m; //getting the temperature from the data that we got back from the server.
+        document.getElementById("output").textContent =
+          `Current temperature: ${temp}°C`; //updating the text of the h1 element with the id of output to show the temperature.
+
+        const hue = Math.max(0, Math.min(240, 240 - temp * 6)); // cold=blue, hot=red
+        console.log(`hue: ${hue}`); //logging the hue value to the console for debugging purposes.
+        document.body.style.backgroundColor = `hsl(${hue}, 70%, 85%)`; //updating the background color of the body element to a color that represents the temperature. The hue value is calculated based on the temperature, with colder temperatures being more blue and hotter temperatures being more red.
+
+        //GET WIND DIRECTION AND ROTATE
+        const windDirection = data.current.wind_direction_10m; //getting the wind direction from the data that we got back from the server.
+        console.log(`wind direction: ${windDirection}`); //logging the wind direction to the console for debugging purposes.
+        document.getElementById("wind-arrow").style.transform =
+          `rotate(${windDirection}deg)`; //updating the rotation of the wind arrow element to show the wind direction.
+
+        document.getElementById("fulldata").textContent = JSON.stringify(
+          data,
+          null,
+          2,
+        );
+
+        // const precip = data.current.precipitation; // mm, over the last hour
+        const precip = 0.5; // TEMP: fake value for testing — swap back to data.current.precipitation
+        document.getElementById("p_output").textContent =
+          `Precipitation: ${precip} mm`;
+        if (precip > 0) {
+          const amt = Math.min(precip * 4, 20); // px of jiggle, capped so heavy rain doesn't fling it offscreen
+          const speed = Math.max(0.15, 0.6 - precip * 0.05); // more rain = faster shake
+          p_output.style.setProperty("--amt", `${amt}px`);
+          p_output.style.animationDuration = `${speed}s`;
+          p_output.style.animationPlayState = "running";
+        } else {
+          p_output.style.animationPlayState = "paused";
+        }
+      }
+
+      getWeather(); //calling the function to get the weather data.
+      setInterval(getWeather, 5000); // recheck every minute
+    </script>
+    <p><a href="precipitation.html">preciptation</a></p>
+    <p><a href="temperature.html">temperature</a></p>
+    <p><a href="wind.html">wind</a></p>
+  </body>
+</html>

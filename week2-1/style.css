@@ -1,0 +1,39 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+canvas {
+  display: block;
+}
+
+p {
+  margin-top: 200px;
+}
+
+#p_output {
+  display: inline-block;
+  animation: jiggle 0.3s infinite;
+  animation-play-state: paused;
+}
+@keyframes jiggle {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(calc(var(--amt, 0px) * -1), var(--amt, 0px))
+      rotate(-1deg);
+  }
+  50% {
+    transform: translate(var(--amt, 0px), calc(var(--amt, 0px) * -1))
+      rotate(1deg);
+  }
+  75% {
+    transform: translate(calc(var(--amt, 0px) * -1), calc(var(--amt, 0px) * -1))
+      rotate(-1deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
