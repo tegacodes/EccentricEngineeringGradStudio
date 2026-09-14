@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+
+  <body>
+    <p id="daylight-status">loading...</p>
+    <div id="content">
+      <p id="fulldata"></p>
+    </div>
+    <script>
+      async function getWeather() {
+        //function to get weather data. Asyc means it will take time to get the data back from the server. It doesnt happen instantly.
+        const lat = 40.71,
+          lon = -74.01; // NYC
+        const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,wind_direction_10m,wind_speed_10m,precipitation,weather_code&daily=sunrise,sunset&timezone=auto`; //this is the url that we are going to use to get the weather data. It is using the lat and lon variables to get the weather for NYC.
+        const response = await fetch(url); //this is asking a serer for data - same as a browser loading a page.
+        const data = await response.json(); //awaiting for the data to come back from the server and then converting it into a format that we can use in our code.
+        console.log(data); // open browser dev tools > Console to see this
+
+        const sunrise = new Date(data.daily.sunrise[0]);
+        const sunset = new Date(data.daily.sunset[0]);
+        const now = new Date();
+        console.log("sunrise", sunrise);
+        console.log("sunset", sunset);
+
+        if (now < sunrise || now > sunset) {
+          document.getElementById("daylight-status").textContent =
+            "This page is only available during daylight hours.";
+          document.getElementById("content").style.display = "none"; //page content is hidden if it is not daylight
+        } else {
+          document.getElementById("daylight-status").textContent =
+            "This page is available during daylight hours.";
+          document.getElementById("content").style.display = "block"; //page content is visible if it is daylight
+        }
+
+        document.getElementById("fulldata").textContent = JSON.stringify(
+          data,
+          null,
+          2,
+        );
+      }
+
+      getWeather(); //calling the function to get the weather data.
+      setInterval(getWeather, 5000); // recheck every minute
+    </script>
+  </body>
+</html>

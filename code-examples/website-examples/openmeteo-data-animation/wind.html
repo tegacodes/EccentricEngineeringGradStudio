@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+
+  <body>
+    <p
+      id="wind-arrow"
+      style="font-size: 4rem; display: inline-block; transform: rotate(0deg)">
+      wind direction ↑
+    </p>
+    <p id="fulldata"></p>
+    <script>
+      async function getWeather() {
+        const lat = 40.71,
+          lon = -74.01; // NYC
+        const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=wind_direction_10m,wind_speed_10m`;
+        const response = await fetch(url);
+        const data = await response.json();
+        console.log(data);
+
+        const windDirection = data.current.wind_direction_10m;
+        document.getElementById("wind-arrow").style.transform =
+          `rotate(${windDirection}deg)`;
+
+        document.getElementById("fulldata").textContent = JSON.stringify(
+          data,
+          null,
+          2,
+        );
+      }
+
+      getWeather();
+      setInterval(getWeather, 5000);
+    </script>
+  </body>
+</html>

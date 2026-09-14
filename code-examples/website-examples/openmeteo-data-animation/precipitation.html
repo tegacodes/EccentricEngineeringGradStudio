@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+
+  <body>
+    <h1 id="p_output">loading...</h1>
+    <p id="fulldata"></p>
+    <script>
+      async function getWeather() {
+        const lat = 40.71,
+          lon = -74.01; // NYC
+        const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=precipitation`;
+        const response = await fetch(url);
+        const data = await response.json();
+        console.log(data);
+
+        // const precip = data.current.precipitation; // mm, over the last hour
+        const precip = 0.5; // TEMP: fake value for testing — swap back to data.current.precipitation
+
+        document.getElementById("p_output").textContent =
+          `Precipitation: ${precip} mm`;
+
+        if (precip > 0) {
+          const amt = Math.min(precip * 4, 20);
+          const speed = Math.max(0.15, 0.6 - precip * 0.05);
+          p_output.style.setProperty("--amt", `${amt}px`);
+          p_output.style.animationDuration = `${speed}s`;
+          p_output.style.animationPlayState = "running";
+        } else {
+          p_output.style.animationPlayState = "paused";
+        }
+
+        document.getElementById("fulldata").textContent = JSON.stringify(
+          data,
+          null,
+          2,
+        );
+      }
+
+      getWeather();
+      setInterval(getWeather, 5000);
+    </script>
+  </body>
+</html>

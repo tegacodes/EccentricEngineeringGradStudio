@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+
+  <body>
+    <h1 id="output">loading...</h1>
+    <p id="fulldata"></p>
+    <script>
+      async function getWeather() {
+        const lat = 40.71,
+          lon = -74.01; // NYC
+        const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m`;
+        const response = await fetch(url);
+        const data = await response.json();
+        console.log(data);
+
+        const temp = data.current.temperature_2m;
+        document.getElementById("output").textContent =
+          `Current temperature: ${temp}°C`;
+
+        const hue = Math.max(0, Math.min(240, 240 - temp * 6)); // cold=blue, hot=red
+        document.body.style.backgroundColor = `hsl(${hue}, 70%, 85%)`;
+
+        document.getElementById("fulldata").textContent = JSON.stringify(
+          data,
+          null,
+          2,
+        );
+      }
+
+      getWeather();
+      setInterval(getWeather, 5000);
+    </script>
+  </body>
+</html>
