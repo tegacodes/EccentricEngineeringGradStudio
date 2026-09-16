@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "It's Hot Reminder",
+  "version": "1.0",
+  "description": "Tints every page yellow when it's over 80°F outside.",
+  "permissions": ["alarms", "storage"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
